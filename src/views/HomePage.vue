@@ -14,7 +14,15 @@
       </p>
     </div>
     <div class="container px-4 py-5">
-      <h2>Up coming event</h2>
+      <div class="d-flex d-flex justify-content-between">
+        <h2 class="">Up coming event</h2>
+        <a class="d-flex align-items-end link link-dark" id="explore" href="/">
+          <div class="d-flex align-items-center">
+            <font-awesome-icon :icon="['fas', 'compass']" class="px-2"/>
+            <span>Explore More</span>
+          </div>
+        </a>
+      </div>
       <hr />
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col">
@@ -99,6 +107,18 @@
     </div>
   </main>
 </template>
+<style>
+.link {
+  text-decoration: none;
+}
+#explore {
+  transition: color 0.3s ease, transform 0.3s ease; /* 호버 효과에 부드러운 전환을 주기 위한 트랜지션 */
+}
+#explore:hover {
+  color: #6666;      /* 호버 시 글자 색상을 조금 회색으로 변경 */
+  transform: scale(1.05); /* 호버 시 글자 크기를 약간 크게 */
+}
+</style>
 
 <script>
 </script>
